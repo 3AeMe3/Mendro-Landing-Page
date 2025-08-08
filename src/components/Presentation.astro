@@ -1,0 +1,63 @@
+---
+import presentationData from "../presentation.json";
+import ButtonVideo from "./Utility/ButtonVideo.astro";
+import videoStart from "../assets/video/video1.mp4";
+---
+
+<section class="h-screen relative">
+  <div class="h-full flex justify-between flex-col pt-25 pb-10 px-5">
+    <div>
+      <span class="text-white">CAPABILITIES</span>
+      <ul class="flex gap-4 text-white font-semibold mt-4">
+        {
+          presentationData.map((item, index) => (
+            <li>
+              <ButtonVideo
+                title={item.title}
+                dataSrc={item.src}
+                dataDesc={item.description}
+                active={index === 0}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <span id="video-description" class="block  text-white text-5xl title">
+        {presentationData[0].description}
+      </span>
+    </div>
+  </div>
+
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover -z-1"
+  >
+    <source id="video-source" src={videoStart} type="video/mp4" />
+  </video>
+
+  <script is:inline>
+    const buttonsVideo = document.getElementsByClassName("button-video");
+    const descriptionVideo = document.getElementById("video-description");
+
+    Array.from(buttonsVideo).forEach((button) => {
+      button.addEventListener("click", () => {
+        Array.from(buttonsVideo).forEach((btn) => {
+          btn.classList.remove("bg-gray-600", "text-white");
+          btn.classList.add("bg-white", "text-gray-500");
+        });
+        button.classList.remove("bg-white", "text-gray-500");
+        button.classList.add("bg-gray-600", "text-white");
+        const videoSource = document.getElementById("video-source");
+        videoSource.src = button.getAttribute("data-src");
+        videoSource.parentElement.load();
+        descriptionVideo.textContent = button.getAttribute("data-description");
+      });
+    });
+  </script>
+</section>

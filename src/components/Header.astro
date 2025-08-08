@@ -1,0 +1,85 @@
+<header class="w-full fixed top-0 z-50">
+  <nav class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center">
+      <!-- Botón hamburguesa -->
+      <div class="flex justify-between items-center w-full gap-3">
+        <span id="nav-brand" class="text-4xl title opacity-0 pt-2">MENDRO</span>
+        <div id="menu-button" class="flex items-center gap-2 text-white">
+          <span class="text-sm">MENU</span>
+          <button class="md:hidden p-2" aria-label="Open menu">
+            <!-- Hamburger Menu -->
+            <div class="relative flex justify-center items-center">
+              <span class="border-1 w-4 hidden"> </span>
+              <span class="absolute border-1 h-2"></span>
+              <span class="absolute border-1 w-2"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <!-- Menú principal -->
+      <ul class="hidden md:flex gap-10 items-center">
+        <li><a href="" class="text-white">Home</a></li>
+        <li><a href="" class="text-white">Works</a></li>
+        <li><a href="" class="text-white">About Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Menú móvil -->
+    <ul
+      id="mobile-menu"
+      class="flex flex-col items-center gap-4 bg-white p-4 md:hidden rounded hidden"
+    >
+      <li><a href="" class="text-black">Home</a></li>
+      <li><a href="" class="text-black">Works</a></li>
+      <li><a href="" class="text-black">About Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script is:inline>
+  const menuButton = document.getElementById("menu-button");
+  const menu = document.getElementById("mobile-menu");
+  const navbarBrand = document.getElementById("nav-brand");
+  const navbar = document.querySelector("nav");
+
+  handleMenuBotton();
+  handleInteractiveMenuButton();
+
+  function handleMenuBotton() {
+    menuButton.addEventListener("click", () => {
+      if (menu.classList.contains("hidden")) {
+        menuBarActive();
+        menu.classList.remove("hidden");
+      } else {
+        menu.classList.add("hidden");
+      }
+    });
+  }
+
+  function handleInteractiveMenuButton() {
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", () => {
+      const currentScrool = window.scrollY;
+
+      if (currentScrool > lastScrollTop) {
+        menuBarActive();
+      } else {
+        menuBarInactive();
+      }
+    });
+  }
+
+  function menuBarActive() {
+    navbarBrand.classList.remove("opacity-0");
+    navbar.classList.add("bg-white");
+    document.getElementById("menu-button").classList.add("menu-active");
+  }
+
+  function menuBarInactive() {
+    navbarBrand.classList.add("opacity-0");
+    navbar.classList.remove("bg-white");
+    menu.classList.add("hidden");
+    document.getElementById("menu-button").classList.remove("menu-active");
+  }
+</script>

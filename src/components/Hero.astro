@@ -1,0 +1,29 @@
+---
+import tshirt from "../assets/tshirt-men.webp";
+import DotSeparation from "./Utility/DotSeparation.astro";
+---
+
+<main class=" h-screen overflow-hidden">
+  <section
+    class=" hero-background h-full pt-20 flex flex-col justify-start items-center text-white text-center"
+  >
+    <div>
+      <h2 class="text-xl">Not just fashion. A Statement</h2>
+      <h1 class="text-9xl">MENDRO</h1>
+    </div>
+    <div
+      class="relative flex flex-col justify-center items-center  h-full"
+    >
+      <img
+        class="h-[120vh] mx-auto object-cover"
+        src={tshirt.src}
+        alt="t-shirt men model"
+      />
+      <div class="absolute top-2/4 z-10 flex flex-col max-w-70 text-center">
+        <span class="text-xl leading-5">Lacoste - Members Experience </span>
+        <DotSeparation dots="................"/>
+        <a href="#" class="font-bold text-sm mt-1">DISCOVER</a>
+      </div>
+    </div>
+  </section>
+</main>
