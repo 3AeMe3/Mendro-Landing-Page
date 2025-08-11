@@ -4,10 +4,10 @@ import ButtonVideo from "./Utility/ButtonVideo.astro";
 import videoStart from "../assets/video/video1.mp4";
 ---
 
-<section class="h-screen relative">
-  <div class="h-full flex justify-between flex-col pt-25 pb-10 px-5">
+<section class="h-[50vh] relative">
+  <div class="h-full flex justify-between flex-col pt-25 sm:pt-10 pb-10 px-5">
     <div>
-      <span class="text-white">CAPABILITIES</span>
+      <span class="text-white sm:text-4xl title ">You Choose!</span>
       <ul class="flex gap-4 text-white font-semibold mt-4">
         {
           presentationData.map((item, index) => (
@@ -25,7 +25,7 @@ import videoStart from "../assets/video/video1.mp4";
     </div>
 
     <div>
-      <span id="video-description" class="block text-white text-5xl title">
+      <span id="video-description" class="block text-white text-5xl sm:text-4xl title">
         {presentationData[0].description}
       </span>
     </div>
