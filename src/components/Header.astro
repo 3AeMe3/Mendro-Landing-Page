@@ -1,6 +1,7 @@
 <header class="w-full fixed top-0 z-50">
   <nav class="max-w-6xl mx-auto">
     <div
+      id="navbar-container"
       class="flex items-center justify-between w-full px-4 pt-1 overflow-hidden relative"
     >
       <!-- Brand -->
@@ -57,23 +58,33 @@
   const navBrand = document.getElementById("nav-brand");
   const navbar = document.querySelector("nav");
 
-  menuButton.addEventListener("click", () => {
-    if (menu.classList.contains("hidden")) {
-      menuBarActive();
-    } else {
-      menuBarInactive();
-    }
-  });
-
   let lastScrollTop = 0;
-
+  let isHome= true;
   window.addEventListener("scroll", () => {
     const currentScrool = window.scrollY;
 
     if (currentScrool > lastScrollTop) {
+      isHome = false;
       menuBarActive();
     } else {
       menuBarInactive();
+      isHome = true;
+    }
+  });
+
+  menuButton.addEventListener("click", () => {
+    console.log(lastScrollTop);
+    if (menu.classList.contains("hidden")) {
+      menuBarActive();
+      menu.classList.remove("hidden");
+    } else {
+      if (isHome) {
+        menuBarInactive();
+        console.log(isHome);
+      } else {
+        menuHidden();
+        console.log(isHome);
+      }
     }
   });
 
@@ -83,9 +94,13 @@
     brandContainer.classList.add("h-[60px]");
     navBrand.classList.remove("opacity-0");
     menuButton.classList.add("menu-active");
-    menu.classList.remove("hidden");
   };
 
+  const menuHidden = () => {
+    menu.classList.add("hidden");
+    menuButton.classList.add("menu-active");
+    
+  };
   const menuBarInactive = () => {
     navbar.classList.remove("bg-white");
     brandContainer.classList.remove("h-[60px]");
