@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 h1,
 h2 {
   font-family: "Bebas Neue", sans-serif;
@@ -36,7 +39,6 @@ body {
   color: #fff;
 }
 
-.menu-active{
+.menu-active {
   color: rgb(71, 71, 71);
-
 }
