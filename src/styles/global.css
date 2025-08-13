@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+@import "./utils.css";
 
 html {
   scroll-behavior: smooth;
@@ -39,6 +40,19 @@ body {
   color: #fff;
 }
 
-.menu-active {
+.navbar-active {
+  background-color: #fff;
+}
+.navbar-active .brand-container {
+  height: 60px;
+}
+.navbar-active .brand-text {
+  opacity: 100;
+}
+.navbar-active #button-menu {
   color: rgb(71, 71, 71);
+}
+
+.navbar-active #main-menu {
+  color: black;
 }
