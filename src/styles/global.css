@@ -1,1 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+@import "./utils.css";
+
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-background {
+  background: #626660;
+  background: linear-gradient(
+    0deg,
+    rgba(98, 102, 96, 1) 0%,
+    rgba(98, 102, 96, 1) 35%,
+    rgba(140, 140, 138, 1) 50%,
+    rgba(98, 102, 96, 1) 65%,
+    rgba(98, 102, 96, 1) 100%
+  );
+}
+
+.button-video.active {
+  background-color: #4b5563; /* bg-gray-600 */
+  color: #fff;
+}
+
+.navbar-active {
+  background-color: #fff;
+}
+.navbar-active .brand-container {
+  height: 60px;
+}
+.navbar-active .brand-text {
+  opacity: 100;
+}
+.navbar-active #button-menu {
+  color: rgb(71, 71, 71);
+}
+
+.navbar-active #main-menu {
+  color: black;
+}
