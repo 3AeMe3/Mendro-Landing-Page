@@ -1,5 +1,8 @@
 ---
-const {color ,size = "md"} = Astro.props;
+const {color ,size = 2} = Astro.props;
 
 ---
-<span class={`inline-block  bg-${color} sm:size-3 md:size-2 rounded-2xl mr-3 `}></span>
+<span class=`inline-block bg-[var(--bg)] size-[var(--s)]   rounded-[50%] mr-3` style={`--bg:${color}; 
+--s:${size};`}></span>
+
+<!-- sm:size-3 md:size-2 xl:size-6 -->
