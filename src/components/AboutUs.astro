@@ -1,16 +1,20 @@
 ---
 import DotSeparation from "./Utility/DotSeparation.astro";
-import Circle from "./Utility/Circle.astro"
 ---
 
-<section class="h-screen sm:h-[78vh] md:h-[50vh] bg-white flex flex-col text-left pt-15 px-4 md:px-10">
-  <h2 class="text-3xl font-normal mb-4 md:text-sm ">
-    <Circle color="black"  />
+<section class="h-screen sm:h-[78vh] md:h-[50vh] lg:h-[95vh] xl:h-screen bg-white flex  justify-center flex-col text-left w-[85%] mx-auto "> 
+  <!-- pt-15 lg:py-25 lg:px-10 px-4 md:px-10 -->
+   <div class="flex h-full flex-col justify-around py-10">
+   <div class="flex items-center  mb-6">
+   <span class="  bg-black size-6 md:size-2 lg:size-5 rounded-full mr-3 2xl:size-7"></span>
+    <h2 class="self-center  pt-1 text-3xl font-light md:text-sm lg:text-2xl 2xl:text-4xl ">
     Inside (the) Mendro
   </h2>
-  <p  class="max-w-2xl text-3xl md:text-2xl md:pr-60 ">
+   </div>
+
+  <p  class="max-w-2xl  text-3xl md:text-2xl md:pr-40 lg:text-[2.7rem] 2xl:max-w-4xl 2xl:text-6xl lg:pr-0 lg:-tracking-wide ">
     <span class="text-gray-500">
-      At MENDRO, we believe in more than just fashion.
+      At Mendro, we believe in more than just fashion.
     </span> We are a community of individuals who express themselves through unique
     styles and sustainable choices. Our mission is to provide <span
       class="bg-black text-white px-1 rounded-sm"
@@ -20,6 +24,7 @@ import Circle from "./Utility/Circle.astro"
   </p>
   <div class="mt-8 flex flex-col">
     <DotSeparation dots="..........................." />
-    <a href="#" class="font-semibold text-sm tracking-wide">MORE ABOUT US </a>
+    <a href="#" class="font-semibold text-sm tracking-wide md:text-[12px] 2xl:text-lg">MORE ABOUT US </a>
+  </div>
   </div>
 </section>
