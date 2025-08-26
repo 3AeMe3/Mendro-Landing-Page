@@ -1,46 +1,52 @@
-# Astro Starter Kit: Basics
+# 🌐 Landing Animada con Astro y GSAP
 
-```sh
-npm create astro@latest -- --template basics
-```
+Una landing page creada para **practicar la integración de animaciones con GSAP en Astro** y explorar el uso de **TailwindCSS** para el diseño responsive.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 🚀 Objetivo del proyecto
+El propósito de este proyecto fue **practicar con Astro y GSAP**, enfocándome en:
+- La integración y manejo de animaciones.
+- La creación de un diseño responsive con TailwindCSS.
+- La optimización de recursos en un sitio animado.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Tecnologías utilizadas
+- [Astro](https://astro.build/) – Framework de sitios estáticos.
+- [GSAP](https://greensock.com/gsap/) – Librería de animaciones.
+- [TailwindCSS](https://tailwindcss.com/) – Framework CSS utilitario.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## 📚 Lo que aprendí
+- Cómo **integrar e implementar animaciones con GSAP dentro de un proyecto Astro**.
+- Organización y buenas prácticas al trabajar con animaciones en componentes.
+- Creación de un diseño **responsive** usando TailwindCSS.
+- Optimización de recursos en proyectos con animaciones.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🧩 Retos encontrados
+- Resolver **bugs con animaciones** al integrarlas en el flujo de Astro.
+- Mejorar la **optimización de recursos** para mantener buena performance en la página.
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🔗 Demo
+El proyecto está desplegado en **Netlify**:  
+👉 [Ver demo en línea](https://TU-LINK-AQUI.netlify.app)
+
+---
+
+## 🖼️ Screenshots
+<!-- Agrega tus capturas de pantalla aquí -->
+![Screenshot del proyecto](./assets/screenshot.png)
+
+---
+
+## 📌 Próximos pasos
+- Agregar más animaciones con **ScrollTrigger** de GSAP.
+- Explorar mejores prácticas de accesibilidad en una landing animada.
+- Incluir dark mode con TailwindCSS.
+
