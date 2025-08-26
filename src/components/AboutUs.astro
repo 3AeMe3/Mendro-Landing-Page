@@ -12,14 +12,14 @@ import DotSeparation from "./Utility/DotSeparation.astro";
   </h2>
    </div>
 
-  <p  class="max-w-2xl  text-3xl md:text-2xl md:pr-40 lg:text-[2.7rem] 2xl:max-w-4xl 2xl:text-6xl lg:pr-0 lg:-tracking-wide ">
-    <span class="text-gray-500">
+  <p  class=" about-text max-w-2xl  text-3xl md:text-2xl md:pr-40 lg:text-[2.7rem] 2xl:max-w-4xl 2xl:text-6xl lg:pr-0 lg:-tracking-wide ">
+    <span class="w-full text-gray-500 bg-red">
       At Mendro, we believe in more than just fashion.
     </span> We are a community of individuals who express themselves through unique
-    styles and sustainable choices. Our mission is to provide <span
-      class="bg-black text-white px-1 rounded-sm"
-    >
+    styles and sustainable choices. Our mission is to provide 
+    <span class=" remark-text relative z-0  ">
       high-quality
+      <span class="absolute -z-1 h-auto left-0 top-0 bottom-0 my-auto rounded-lg bg-black"></span>
     </span>.
   </p>
   <div class="mt-8 flex flex-col">
@@ -28,3 +28,60 @@ import DotSeparation from "./Utility/DotSeparation.astro";
   </div>
   </div>
 </section>
+
+<script >
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(SplitText,ScrollTrigger);
+
+let mySplitText = SplitText.create(".about-text",{type: "lines"})
+let remarkText = SplitText.create(".remark-text",{type: "chars"})
+let aboutTl = gsap.timeline({
+
+    scrollTrigger:{
+    trigger: ".about-text",
+    start: "top 95%",
+    end: "top bottom",
+    markers: true,
+    toggleActions: "play none none reverse", 
+    fastScrollEnd: true,
+    onEnterBack: ({progress,direction,isActive}) => {
+      console.log(progress,direction,isActive);
+      aboutTl.reverse();
+    }
+    }});
+
+
+document.fonts.ready.then(() => {
+  aboutTl.from(mySplitText.lines,{
+    y:30,
+    opacity: 0,
+    duration:1,
+    ease: "power4",
+    stagger: .3,
+
+    }).fromTo(".remark-text > span",{
+    width: 0,
+    ease: "power2.out",
+    stagger: 1,
+
+  },{
+    duration: .5,
+    width: "100%",
+    ease: "power2.out",
+    stagger: 0.1,
+
+  },2.3).to(remarkText.chars,{
+    color: "white",
+    stagger: 0.01,
+    ease: "power1.in",
+  },2)
+
+})
+
+
+
+</script>
