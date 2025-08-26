@@ -1,7 +1,6 @@
 ---
 import presentationData from "../presentation.json";
 import ButtonVideo from "./Utility/ButtonVideo.astro";
-import videoStart from "../assets/video/video1.mp4";
 ---
 
 <section class="h-[100vh] sm:h-[50vh] lg:h-[85vh] relative">
@@ -36,14 +35,14 @@ import videoStart from "../assets/video/video1.mp4";
     autoplay
     muted
     playsinline
+    preload="auto"
     class="absolute inset-0 w-full h-full object-cover -z-1"
   >
-    <source id="video-source" src={videoStart} type="video/mp4" />
+    <source id="video-source" src="./videos/Video1.mp4" type="video/mp4" />
   </video>
 
-  <script >
+  <script client:load >
   import presentationData from "../presentation.json";
-  import ButtonVideo from "./Utility/ButtonVideo.astro";
   
     const buttonsVideo = document.getElementsByClassName("button-video");
     const descriptionVideo = document.getElementById("video-description");
