@@ -34,20 +34,3 @@ body {
   background-color: #4b5563; /* bg-gray-600 */
   color: #fff;
 }
-
-.navbar-active {
-  background-color: #fff;
-}
-.navbar-active .brand-container {
-  height: 60px;
-}
-.navbar-active .brand-text {
-  opacity: 100;
-}
-.navbar-active #button-menu {
-  color: rgb(71, 71, 71);
-}
-
-.navbar-active #main-menu {
-  color: black;
-}

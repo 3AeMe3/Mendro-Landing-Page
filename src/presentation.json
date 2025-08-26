@@ -1,17 +1,17 @@
 [
-    {
-        "src": "./src/assets/video/video1.mp4",
-        "title": "T-Shirts",
-        "description": "Stand out with bold T-shirts. Make your statement."
-    },
-    {
-        "src": "./src/assets/video/video2.mp4",
-        "title": "Dress",
-        "description": "Elevate your style with stunning dresses. Feel unique."
-    },
-    {
-        "src": "./src/assets/video/video3.mp4",
-        "title": "Caps",
-        "description": "Top off your look with trendy caps. Be unforgettable."
-    }
+  {
+    "src": "./src/assets/video/video1.mp4",
+    "title": "T-Shirts",
+    "description": "Stand out with bold T-shirts. Make your statement."
+  },
+  {
+    "src": "./src/assets/video/video2.mp4",
+    "title": "Dress",
+    "description": "Elevate your style with stunning dresses. Feel unique."
+  },
+  {
+    "src": "./src/assets/video/video3.mp4",
+    "title": "Caps",
+    "description": "Top off your look with trendy caps. Be unforgettable."
+  }
 ]
