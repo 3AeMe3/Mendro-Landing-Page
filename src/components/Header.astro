@@ -78,7 +78,7 @@
     buttonMenu.addEventListener("click", () => {
   if (!isOpen) {
     mobileMenu.classList.remove("hidden");
-    navTl.play();
+    navTl.play(1.5);
     // Timeline para abrir
     const tlOpen = gsap.timeline();
     tlOpen
@@ -87,7 +87,7 @@
         opacity: 1,
         duration: 0.35,
         ease: "power2.out",
-      })
+      },)
       .to(
         menuItems,
         {
