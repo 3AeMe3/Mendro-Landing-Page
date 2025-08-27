@@ -35,7 +35,7 @@ El propósito de este proyecto fue **practicar con Astro y GSAP**, enfocándome 
 
 ## 🔗 Demo
 El proyecto está desplegado en **Netlify**:  
-👉 [Ver demo en línea](https://TU-LINK-AQUI.netlify.app)
+👉 [Ver demo en línea](mendro.netlify.app)
 
 ---
 
