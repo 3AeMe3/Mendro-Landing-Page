@@ -41,7 +41,7 @@ El proyecto está desplegado en **Netlify**:
 
 ## 🖼️ Screenshots
 <!-- Agrega tus capturas de pantalla aquí -->
-![Screenshot del proyecto](./screenshot.png)
+![Screenshot del proyecto](./public/screenshot.png)
 
 ---
 
